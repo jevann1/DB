@@ -130,5 +130,9 @@ WHERE skill_id = ? AND project_id = ? """ # Masukkan kueri SQL yang benar di sin
         self.__executemany(sql, [(skill_id, project_id)])
 
 
+
+
 if __name__ == '__main__':
     manager = DB_Manager(DATABASE)
+    manager.create_tables()
+    manager.default_insert()
